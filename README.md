@@ -4,6 +4,8 @@
 |:--:|
 | *Figure 1: Kanban view displaying cases by priority.* |
 
+This PCF comes originally from here : https://github.com/novalogica/pcf-kanban-control/tree/main
+
 This **PowerApps Component Framework (PCF)** control enables users to visualize records in a **Kanban** view.
 
 ## 📌 Features
@@ -66,6 +68,18 @@ You can set the JSON data in the input using the old interface
 
 Run the following commands to deploy the control:
 
+npm run build
+
+mkdir P365_PCF_ViewKanbanControl
+
+cd P365_PCF_ViewKanbanControl
+
+dotnet build
+
+This will generate a managed solution in bin\Debug
+
+To deploy, load the .zip file in Power Apps or using method below
+
 #### 1. Create an authentication profile:
    ```sh
    pac auth create --url https://xyz.crm.dynamics.com
@@ -82,6 +96,15 @@ Run the following commands to deploy the control:
    ```sh
    pac pcf push -pp <your publisher prefix>
    ```
+
+For use, after importing the solution, go to power apps
+
+Open the old maker portal
+
+Entity > Opportunity > Controls > 
+
+Add the "Kanban View Control"
+
 
 ## Contributions
 Contributions to improve or enhance this control are welcome. If you encounter issues or have feature requests, please create an issue or submit a pull request in the repository.
