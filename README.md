@@ -68,13 +68,23 @@ You can set the JSON data in the input using the old interface
 
 Run the following commands to deploy the control:
 
+To build the code
+```sh
 npm run build
+```
 
+```sh
 mkdir P365_PCF_ViewKanbanControl
+```
 
+```sh
 cd P365_PCF_ViewKanbanControl
+```
 
+To generate solutions(currently, unmanaged and managed solutions are built, modify the .cdsproj if needed to change it and build only one)
+```sh
 dotnet build
+```
 
 This will generate a managed solution in bin\Debug
 
